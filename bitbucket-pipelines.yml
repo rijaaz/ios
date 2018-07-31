@@ -10,3 +10,9 @@ pipelines:
     - step:
         script:
           - echo "Everything is awesome!"
+    - step:
+        name: Deploy to test
+        deployment: test   # can be test, staging or production
+    # trigger: manual  # uncomment to make manual deployment
+        script:
+        - echo "Deploying to test environment"
